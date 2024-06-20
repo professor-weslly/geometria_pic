@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Perguntas sobre Sólidos Geométricos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Jogo de Perguntas sobre Sólidos Geométricos</h1>
+        
+        <div id="question-container">
+            <div class="question-slide active" id="slide1">
+                <p><strong>Pergunta 1:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cubo.jpg" alt="Cubo" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> A) Cubo</label>
+                    <label><input type="radio" name="q1" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q1" value="c"> C) Cilindro</label>
+                    <button onclick="avancarPergunta('q1', 'a')">Próxima Pergunta</button>
+                </div>
+            </div>
+
+            <div class="question-slide" id="slide2">
+                <p><strong>Pergunta 2:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="esfera.jpg" alt="Esfera" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> A) Esfera</label>
+                    <label><input type="radio" name="q2" value="b"> B) Cubo</label>
+                    <label><input type="radio" name="q2" value="c"> C) Cilindro</label>
+                    <button onclick="avancarPergunta('q2', 'a')">Próxima Pergunta</button>
+                </div>
+            </div>
+
+            <div class="question-slide" id="slide3">
+                <p><strong>Pergunta 3:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q3" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q3" value="c"> C) Cubo</label>
+                    <button onclick="exibirResultadoFinal()">Ver Pontuação</button>
+                </div>
+            </div>
+
+            <!-- Nova pergunta com canvas -->
+            <div class="question-slide" id="slide4">
+                <p><strong>Pergunta 4:</strong> Desenhe um cubo no quadro abaixo:</p>
+                <canvas id="drawCanvas" width="400" height="400" class="solid-canvas"></canvas>
+                <div class="options">
+                    <button onclick="verificarDesenho()">Verificar Desenho</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="pontuacao" style="display: none;">Pontuação: 0</div>
+        <button id="restartButton" style="display: none;" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+    </div>
+
+    <!-- Custom Alert Box -->
+    <div id="customAlert" class="custom-alert">
+        <div class="message"></div>
+        <button onclick="fecharCustomAlert()">OK</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
