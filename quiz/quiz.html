@@ -44,15 +44,20 @@
                 </div>
             </div>
 
-            <!-- Nova pergunta com canvas -->
+            
             <div class="question-slide" id="slide4">
-                <p><strong>Pergunta 4:</strong> Desenhe um cubo no quadro abaixo:</p>
-                <canvas id="drawCanvas" width="400" height="400" class="solid-canvas"></canvas>
+                <p><strong>Pergunta 3:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
                 <div class="options">
-                    <button onclick="verificarDesenho()">Verificar Desenho</button>
+                    <label><input type="radio" name="q3" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q3" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q3" value="c"> C) Cubo</label>
+                    
+                    <button onclick="exibirResultadoFinal()">Ver Pontuação</button>
                 </div>
             </div>
-        </div>
+
+           
 
         <div id="pontuacao" style="display: none;">Pontuação: 0</div>
         <button id="restartButton" style="display: none;" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
