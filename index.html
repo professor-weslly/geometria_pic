@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você sabe o que é um sólido geométrico?</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Você sabe o que é um sólido geométrico?</h1>
+        <div id="buttons">
+            <button onclick="desenharCubo()">Cubo</button>
+            <button onclick="desenharCilindro()">Cilindro</button>
+            <button onclick="desenharCone()">Cone</button>
+            <button onclick="desenharPiramide()">Pirâmide</button>
+            <button onclick="desenharPrisma()">Prisma</button>
+            <button onclick="desenharEsfera()">Esfera</button>
+            <button onclick="desenharParalelepipedo()">Paralelepípedo</button>
+        </div>
+        <div id="canvasContainer"></div>
+        <div id="sólidoDescription" class="description" style="display: none;"></div>
+    </div>
+
+<div id="quizContainer">
+    
+   <a href="./quiz/quiz.html" class="quiz-botao">Iniciar Quiz</a>
+</div>    
+   
+    <script src="script.js"></script>
+</body>
+</html>
