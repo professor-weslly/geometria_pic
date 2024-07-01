@@ -106,5 +106,35 @@ function desenharParalelepipedo() {
     animate();
 }
 
+function desenharOctaedro() {
+    limparCena();
+    var geometry = new THREE.OctahedronGeometry();
+    var material = new THREE.MeshBasicMaterial({ color: 0x8a2be2, wireframe: true });
+    var octaedro = new THREE.Mesh(geometry, material);
+    scene.add(octaedro);
+    mostrarDescricao("Um octaedro é um sólido geométrico com oito faces triangulares equiláteras. Ele é um dos cinco sólidos platônicos.");
+    animate();
+}
+
+function desenharDodecaedro() {
+    limparCena();
+    var geometry = new THREE.DodecahedronGeometry();
+    var material = new THREE.MeshBasicMaterial({ color: 0x7fff00, wireframe: true });
+    var dodecaedro = new THREE.Mesh(geometry, material);
+    scene.add(dodecaedro);
+    mostrarDescricao("Um dodecaedro é um sólido geométrico com doze faces pentagonais. Ele é um dos cinco sólidos platônicos.");
+    animate();
+}
+
+function desenharIcosaedro() {
+    limparCena();
+    var geometry = new THREE.IcosahedronGeometry();
+    var material = new THREE.MeshBasicMaterial({ color: 0xff69b4, wireframe: true });
+    var icosaedro = new THREE.Mesh(geometry, material);
+    scene.add(icosaedro);
+    mostrarDescricao("Um icosaedro é um sólido geométrico com vinte faces triangulares equiláteras. Ele é um dos cinco sólidos platônicos.");
+    animate();
+}
+
 // Initialize the scene
 init();
