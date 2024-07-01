@@ -12,39 +12,136 @@
         
         <div id="question-container">
             <div class="question-slide active" id="slide1">
-                <p><strong>Pergunta 1:</strong> Qual é o nome deste sólido geométrico?</p>
-                <img src="cubo.jpg" alt="Cubo" class="solid-img">
+                <p><strong>Pergunta 1:</strong> Como se calcula os lados de um triângulo?</p>
+                <img src="img/cubo.png" alt="Cubo" class="solid-img">
                 <div class="options">
-                    <label><input type="radio" name="q1" value="a"> A) Cubo</label>
-                    <label><input type="radio" name="q1" value="b"> B) Esfera</label>
-                    <label><input type="radio" name="q1" value="c"> C) Cilindro</label>
-                    <button onclick="avancarPergunta('q1', 'a')">Próxima Pergunta</button>
+                    <label><input type="radio" name="q1" value="a"> A) Altura e base</label>
+                    <label><input type="radio" name="q1" value="b"> B) a²+b²=c², onde C é o maior lado</label>
+                    <label><input type="radio" name="q1" value="c"> C) a²+b³=c². onde A é oposto</label>
+                    <button onclick="avancarPergunta('q1', 'b')">Próxima Pergunta</button>
                 </div>
             </div>
 
             <div class="question-slide" id="slide2">
-                <p><strong>Pergunta 2:</strong> Qual é o nome deste sólido geométrico?</p>
+                <p><strong>Pergunta 2:</strong> Quais são as quatro formas geométricas?</p>
                 <img src="esfera.jpg" alt="Esfera" class="solid-img">
                 <div class="options">
-                    <label><input type="radio" name="q2" value="a"> A) Esfera</label>
-                    <label><input type="radio" name="q2" value="b"> B) Cubo</label>
-                    <label><input type="radio" name="q2" value="c"> C) Cilindro</label>
-                    <button onclick="avancarPergunta('q2', 'a')">Próxima Pergunta</button>
+                    <label><input type="radio" name="q2" value="a"> A) Equilátero,poligono.circulo e cubo</label>
+                    <label><input type="radio" name="q2" value="b"> B) Cilindro,prisma,cubo e triângulo</label>
+                    <label><input type="radio" name="q2" value="c"> C) circulo,quadrado,retângulo e triângulo</label>
+                    <button onclick="avancarPergunta('q2', 'c')">Próxima Pergunta</button>
                 </div>
             </div>
 
             <div class="question-slide" id="slide3">
-                <p><strong>Pergunta 3:</strong> Qual é o nome deste sólido geométrico?</p>
+                <p><strong>Pergunta 3:</strong> Como são classificados as formas geométricas?</p>
                 <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
                 <div class="options">
-                    <label><input type="radio" name="q3" value="a"> A) Cilindro</label>
-                    <label><input type="radio" name="q3" value="b"> B) Esfera</label>
-                    <label><input type="radio" name="q3" value="c"> C) Cubo</label>
-                    <button onclick="exibirResultadoFinal()">Ver Pontuação</button>
+                    <label><input type="radio" name="q3" value="a"> A) formas base</label>
+                    <label><input type="radio" name="q3" value="b"> B) formas tridimencionáis</label>
+                    <label><input type="radio" name="q3" value="c"> C) formas planas e formas espaciais</label>
+                    <button onclick="avancarPergunta('q3', 'c')">Próxima Pergunta</button>
                 </div>
             </div>
 
-          
+            <div class="question-slide" id="slide4">
+                <p><strong>Pergunta 4:</strong> O que é uma forma tridimensional?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> A) são as que possuem comprimento,largura e altura</label>
+                    <label><input type="radio" name="q4" value="b"> B) </label>
+                    <label><input type="radio" name="q4" value="c"> C) Cubo</label>
+                    <button onclick="avancarPergunta('q4', 'c')">Próxima Pergunta</button>
+                </div>
+            </div>
+
+            <div class="question-slide" id="slide5">
+                <p><strong>Pergunta 5:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">O
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q5" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q5" value="c"> C) Cubo</label>
+                    <button onclick="avancarPergunta('q5', 'c')">Próxima Pergunta</button>
+                </div>
+            </div>
+            
+            <div class="question-slide" id="slide6">
+                <p><strong>Pergunta 6:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q6" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q6" value="c"> C) Cubo</label>
+                    <button onclick="avancarPergunta('q6', 'c')">Próxima Pergunta</button>
+                </div>
+            </div>
+
+            <div class="question-slide" id="slide7">
+                <p><strong>Pergunta 7:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q7" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q7" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q7" value="c"> C) Cubo</label>
+                    <button onclick="avancarPergunta('q7', 'c')">Próxima Pergunta</button>
+                </div>
+            </div>
+
+            <div class="question-slide" id="slide8">
+                <p><strong>Pergunta 8:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q8" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q8" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q8" value="c"> C) Cubo</label>
+                    <button onclick="avancarPergunta('q8', 'c')">Próxima Pergunta</button>
+                </div>
+            </div>
+
+            <div class="question-slide" id="slide9">
+                <p><strong>Pergunta 9:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q9" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q9" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q9" value="c"> C) Cubo</label>
+                    <button onclick="avancarPergunta('q9', 'c')">Próxima Pergunta</button>
+                </div>
+            </div>    
+
+            <div class="question-slide" id="slide10">
+                <p><strong>Pergunta 10:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q10" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q10" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q10" value="c"> C) Cubo</label>
+                    <button onclick="avancarPergunta('q10', 'c')">Próxima Pergunta</button>
+                </div>
+            </div>
+
+            <div class="question-slide" id="slide11">
+                <p><strong>Pergunta 11:</strong> Qual é o nome deste sólido geométrico?</p>
+                <img src="cilindro.jpg" alt="Cilindro" class="solid-img">
+                <div class="options">
+                    <label><input type="radio" name="q11" value="a"> A) Cilindro</label>
+                    <label><input type="radio" name="q11" value="b"> B) Esfera</label>
+                    <label><input type="radio" name="q11" value="c"> C) Cubo</label>
+                    <button onclick="avancarPergunta('q11', 'c')">Próxima Pergunta</button>
+                </div>
+            </div>
+             <!-- Nova pergunta com canvas -->
+             <div class="question-slide" id="slide12">
+                <p><strong>Desenhe uma forma geométrica no quadro abaixo:</strong></p>
+                <canvas id="drawCanvas" width="400" height="400" class="solid-canvas"></canvas>
+                <div class="options">
+                <button onclick="exibirResultadoFinal()">Ver Pontuação</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        
         <div id="pontuacao" style="display: none;">Pontuação: 0</div>
         <button id="restartButton" style="display: none;" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
     </div>
@@ -55,6 +152,7 @@
         <button onclick="fecharCustomAlert()">OK</button>
     </div>
 
+   
     <script src="script.js"></script>
 </body>
 </html>
