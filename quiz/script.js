@@ -7,20 +7,27 @@ var context = document.getElementById('drawCanvas').getContext('2d');
 function avancarPergunta(pergunta, respostaCorreta) {
     var resultado = verificarResposta(pergunta, respostaCorreta);
 
+    if (resultado.respostaSelecionada === "") {
+        mostrarCustomAlert(resultado.mensagem);
+        return; // Não avança para a próxima pergunta se nenhuma resposta for selecionada
+    }
+
     mostrarCustomAlert(resultado.mensagem);
 
-    if (resultado.correto) {
-        pontuacao++;
-    }
+    setTimeout(function() {
+        if (resultado.correto) {
+            pontuacao++;
+        }
 
-    ocultarSlide(currentQuestion);
-    currentQuestion++;
+        ocultarSlide(currentQuestion);
+        currentQuestion++;
 
-    if (currentQuestion < slides.length) {
-        mostrarSlide(currentQuestion);
-    } else {
-        exibirResultadoFinal();
-    }
+        if (currentQuestion < slides.length) {
+            mostrarSlide(currentQuestion);
+        } else {
+            exibirResultadoFinal();
+        }
+    }, 3000); // Espera 3 segundos antes de avançar para a próxima pergunta
 }
 
 function verificarResposta(pergunta, respostaCorreta) {
@@ -35,13 +42,13 @@ function verificarResposta(pergunta, respostaCorreta) {
     }
 
     if (respostaSelecionada === "") {
-        return { correto: false, mensagem: "Por favor, selecione uma resposta." };
+        return { correto: false, mensagem: "Por favor, selecione uma resposta.", respostaSelecionada: "" };
     }
 
     if (respostaSelecionada === respostaCorreta) {
-        return { correto: true, mensagem: "Resposta correta!" };
+        return { correto: true, mensagem: "Resposta correta!", respostaSelecionada: respostaSelecionada };
     } else {
-        return { correto: false, mensagem: "Resposta incorreta. Tente novamente." };
+        return { correto: false, mensagem: "Resposta incorreta!", respostaSelecionada: respostaSelecionada };
     }
 }
 
@@ -72,13 +79,24 @@ function fecharCustomAlert() {
 }
 
 function reiniciarQuiz() {
-    pontuacao = 0;
-    currentQuestion = 0;
-    document.getElementById("pontuacao").style.display = "none";
-    document.getElementById("restartButton").style.display = "none";
-    context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Limpar o canvas
-    mostrarSlide(currentQuestion);
+    setTimeout(function() {
+        pontuacao = 0;
+        currentQuestion = 0;
+        document.getElementById("pontuacao").style.display = "none";
+        document.getElementById("restartButton").style.display = "none";
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Limpar o canvas
+        ocultarTodosSlides();
+        mostrarSlide(currentQuestion);
+    }, 2000); // Espera 2 segundos antes de reiniciar o quiz
 }
+
+function ocultarTodosSlides() {
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+    }
+}
+
+
 
 function iniciarDesenho(event) {
     drawing = true;
